@@ -1,0 +1,6 @@
+service : {
+  balanceOf: (principal) -> (nat) query;
+  sell: (principal, nat) -> (bool);
+  sendCoin: (principal, principal, nat) -> () oneway;
+  topUp: (principal, nat) -> (bool);
+}
