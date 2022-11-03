@@ -1,3 +1,7 @@
-export default Emp = ()=>{
-    return <h1>emp</h1>
+import React from "react";
+
+const Emp = ()=>{
+    return <h1>Emp</h1>;
 }
+
+export default Emp;

@@ -1,6 +1,7 @@
 service : {
   balanceOf: (principal) -> (nat) query;
+  getID: () -> (principal);
   sell: (principal, nat) -> (bool);
-  sendCoin: (principal, principal, nat) -> () oneway;
+  sendCoin: (principal, principal, nat) -> (bool);
   topUp: (principal, nat) -> (bool);
 }
