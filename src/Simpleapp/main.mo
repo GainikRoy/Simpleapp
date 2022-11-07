@@ -1,10 +1,13 @@
 import Principal "mo:base/Principal";
 import HashMap "mo:base/HashMap";
+import Iter "mo:base/Iter";
+import Debug "mo:base/Debug";
 
 actor SimpleCoin {
-  var owner : Principal = Principal.fromText("thdcm-bmedq-fckvn-6o5zu-54igt-wans3-57p72-unsuq-7lx4q-wbwq6-4ae");
+  // let owner : Principal = Principal.fromText("thdcm-bmedq-fckvn-6o5zu-54igt-wans3-57p72-unsuq-7lx4q-wbwq6-4ae");
   var totalSupply : Nat = 10000;
-  var symbol : Text = "SPC";
+  let symbol : Text = "SPC";
+  private stable var balanceEntries : [(Principal, Nat)] = [];
 
   var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
 
@@ -68,5 +71,13 @@ actor SimpleCoin {
   };
   public shared (msg) func getID() : async Principal {
     msg.caller;
+  };
+
+  system func preupgrade() {
+    balanceEntries := Iter.toArray(balances.entries());
+  };
+
+  system func postupgrade() {
+    balances := HashMap.fromIter<Principal, Nat>(balanceEntries.vals(), 1, Principal.equal, Principal.hash);
   };
 };

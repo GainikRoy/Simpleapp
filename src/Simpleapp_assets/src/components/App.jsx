@@ -5,12 +5,14 @@ import BuySMPC from "./innerComp/BuySMPC";
 import SellSMPC from "./innerComp/SellSMPC";
 import TransferSMPC from "./innerComp/TransferSMPC";
 import Getid from "./innerComp/Getid";
+import NavBar from "./innerComp/NavBar";
 
 
 const App = () => {
 
   return <>
     {/* <h1>test</h1> */}
+    <NavBar />
     <Getid />
     <CheckSMPC />
     <BuySMPC />

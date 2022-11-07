@@ -1,6 +1,7 @@
 import { Simpleapp } from "../../../../declarations/Simpleapp/index"
 import React from "react";
 import { Principal } from "@dfinity/principal";
+import { Container } from "../../../../../node_modules/@material-ui/core/index";
 
 const SellSMPC = () => {
     const [id, changeID] = React.useState("");
@@ -14,11 +15,13 @@ const SellSMPC = () => {
         // changeAmount(value.toLocaleString());
     }
     return <>
-        <h2>Sell SPC</h2 >
-        <input type="text" placeholder="Enter ID" onChange={(e)=> changeID(e.target.value) } value={id} />
-        <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value)) } value={amount} />
-        <button onClick={changeFun}>Sell</button>
-        <p>{ state ? "sucessful" : ""}</p>
+        <container>
+            <h2>Sell SPC</h2 >
+            <input type="text" placeholder="Enter ID" onChange={(e) => changeID(e.target.value)} value={id} /><br />
+            <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value))} value={amount} /><br />
+            <button onClick={changeFun}>Sell</button><br />
+            <p>{state ? "sucessful" : ""}</p><br />
+        </container>
     </>
 }
 

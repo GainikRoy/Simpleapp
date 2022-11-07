@@ -1,6 +1,7 @@
 import { Simpleapp } from "../../../../declarations/Simpleapp/index"
 import React from "react";
-import {Principal} from "@dfinity/principal";
+import { Principal } from "@dfinity/principal";
+import { Container } from "../../../../../node_modules/@material-ui/core/index";
 
 
 const BuySMPC = () => {
@@ -14,10 +15,12 @@ const BuySMPC = () => {
         changeAmount(value.toLocaleString());
     }
     return <>
-        <h2>Check balance</h2>
-        <input type="text" placeholder="Enter ID" onChange={(e) => changeID(e.target.value)} value={id} />
-        <button onClick={changeFun}>Check balance</button>
-        <p>Balance: {amount}</p>
+        <container>
+            <h2>Check balance</h2>
+            <input type="text" placeholder="Enter ID" onChange={(e) => changeID(e.target.value)} value={id} /><br />
+            <button onClick={changeFun}>Check balance</button><br />
+            <p>Balance: {amount}</p><br />
+        </container>
     </>
 }
 

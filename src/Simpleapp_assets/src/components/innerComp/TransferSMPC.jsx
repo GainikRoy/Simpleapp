@@ -1,6 +1,7 @@
 import React from "react";
 import { Principal } from "@dfinity/principal";
 import { Simpleapp } from "../../../../declarations/Simpleapp";
+import { Container } from "../../../../../node_modules/@material-ui/core/index";
 
 const TransferSMPC = () => {
     const [fromId, changeFromID] = React.useState("");
@@ -19,12 +20,14 @@ const TransferSMPC = () => {
     }
 
     return <>
-        <h2> Transfer SPC</h2>
-        <input type="text" placeholder="Enter Source ID" onChange={(e) => changeFromID(e.target.value)} value={fromId} />
-        <input type="text" placeholder="Enter Target ID" onChange={(e) => changeToId(e.target.value)} value={toID} />
-        <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value))} value={amount} />
-        <button onClick={clickHandler}>SELL</button>
-        <p>{state ? "sucessful" : ""}</p>
+        <container>
+            <h2> Transfer SPC</h2>
+            <input type="text" placeholder="Enter Source ID" onChange={(e) => changeFromID(e.target.value)} value={fromId} /><br />
+            <input type="text" placeholder="Enter Target ID" onChange={(e) => changeToId(e.target.value)} value={toID} /><br />
+            <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value))} value={amount} /><br />
+            <button onClick={clickHandler}>SELL</button>
+            <p>{state ? "sucessful" : ""}</p>
+        </container>
     </>
 }
 
