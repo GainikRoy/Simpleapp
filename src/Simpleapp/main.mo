@@ -4,7 +4,6 @@ import Iter "mo:base/Iter";
 import Debug "mo:base/Debug";
 
 actor SimpleCoin {
-  // let owner : Principal = Principal.fromText("thdcm-bmedq-fckvn-6o5zu-54igt-wans3-57p72-unsuq-7lx4q-wbwq6-4ae");
   var totalSupply : Nat = 10000;
   let symbol : Text = "SPC";
   private stable var balanceEntries : [(Principal, Nat)] = [];
