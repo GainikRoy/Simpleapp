@@ -1,7 +1,7 @@
 import { Simpleapp } from "../../../../declarations/Simpleapp/index"
 import React from "react";
 import { Principal } from "@dfinity/principal";
-import { Container } from "../../../../../node_modules/@material-ui/core/index";
+// import { Container } from "../../../../../node_modules/@material-ui/core/index";
 
 const CheckSMPC = () => {
     const [id, changeID] = React.useState("");

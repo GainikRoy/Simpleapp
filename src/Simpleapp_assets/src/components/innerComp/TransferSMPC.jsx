@@ -25,7 +25,7 @@ const TransferSMPC = () => {
             <input type="text" placeholder="Enter Source ID" onChange={(e) => changeFromID(e.target.value)} value={fromId} /><br />
             <input type="text" placeholder="Enter Target ID" onChange={(e) => changeToId(e.target.value)} value={toID} /><br />
             <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value))} value={amount} /><br />
-            <button onClick={clickHandler}>SELL</button>
+            <button onClick={clickHandler}>Transfer</button>
             <p>{state ? "sucessful" : ""}</p>
         </container>
     </>

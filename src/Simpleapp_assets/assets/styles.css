@@ -25,11 +25,7 @@ body {
 }
 
 container {
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-  margin: 10px;
-  /* padding: auto; */
+  margin: 20px;
 }
 
 h2 {
