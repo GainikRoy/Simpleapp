@@ -9,7 +9,7 @@ const Getid = () => {
     }
     return <>
         <container>
-            <h2>Getid</h2>
+            <h3>Getid</h3>
             <button onClick={handler}>get ID</button>
             <p>{val}</p>
         </container>

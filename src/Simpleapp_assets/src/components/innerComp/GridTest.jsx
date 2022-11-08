@@ -4,10 +4,14 @@ import BuySMPC from "./BuySMPC";
 import CheckSMPC from "./CheckSMPC";
 import Getid from "./Getid";
 import TransferSMPC from "./TransferSMPC";
+import NavBar from "./NavBar";
 
 const GridTest = () => {
     return <>
         <Grid container spacing={2}>
+            {/* <Grid item xs={12}>
+                <NavBar />
+            </Grid> */}
             <Grid item xs={6}>
                 <Getid />
             </Grid>

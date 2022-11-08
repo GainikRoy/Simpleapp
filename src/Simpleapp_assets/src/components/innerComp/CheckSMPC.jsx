@@ -16,7 +16,7 @@ const CheckSMPC = () => {
     }
     return <>
         <container>
-            <h2>Buy SPC</h2 >
+            <h3>Buy SPC</h3>
             <input type="text" placeholder="Enter ID" onChange={(e) => changeID(e.target.value)} value={id} /><br />
             <input type="text" placeholder="Amount" onChange={(e) => changeAmount(Number(e.target.value))} value={amount} /><br />
             <button onClick={changeFun}>Buy</button><br />

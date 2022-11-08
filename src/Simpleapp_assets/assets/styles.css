@@ -18,18 +18,18 @@ body {
 .h1Main,
 .pMain {
   text-align: center;
-}
-
-.h1Main {
   margin: 5px;
 }
 
-container {
-  margin: 20px;
+
+
+.mainDiv {
+  margin: 10px;
 }
 
-h2 {
+h3 {
   margin: 5px;
+  margin-left: 10px;
 }
 
 input[type=text] {

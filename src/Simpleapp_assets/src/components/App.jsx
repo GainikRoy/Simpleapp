@@ -7,9 +7,9 @@ const App = () => {
 
   return <>
     <NavBar />
-    <container>
+    <div className="mainDiv">
       <GridTest />
-    </container>
+    </div>
   </>
 
 }
